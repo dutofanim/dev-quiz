@@ -24,7 +24,7 @@ extension LevelExt on Level {
 
 class QuizModel {
   final String title;
-  final String imagem;
+  final String? imagem;
   final List<QuestionModel> questions;
   final int questionsAwnsered;
   final Level level;
