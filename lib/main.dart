@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'home/home_page.dart';
+import 'challenge/challenge_page.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: HomePage(),
+      home: ChallengePage(),
     );
   }
 }
