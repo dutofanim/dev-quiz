@@ -1,16 +1,21 @@
 import 'package:devquiz/challenge/widgets/question_indicator/question_indicator_widget.dart';
+import 'package:devquiz/shared/models/question_model.dart';
 import 'package:flutter/material.dart';
 import 'widgets/next_button/next_button_widget.dart';
 import 'widgets/quiz/quiz_widget.dart';
 
 class ChallengePage extends StatefulWidget {
-  ChallengePage({Key? key}) : super(key: key);
+  final List<QuestionModel> questions;
+  ChallengePage({Key? key, required this.questions}) : super(key: key); 
 
   @override
-  _ChallengePageState createState() => _ChallengePageState();
+  _ChallengePageState createState() => _ChallengePageState(questions);
 }
 
 class _ChallengePageState extends State<ChallengePage> {
+  final List<QuestionModel> questions;
+
+  _ChallengePageState(this.questions);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,16 +26,18 @@ class _ChallengePageState extends State<ChallengePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              IconButton(icon: Icon(Icons.close), onPressed: () {
-                Navigator.pop(context);
-              }),
+              IconButton(
+                  icon: Icon(Icons.close),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  }),
               QuestionIndicatorWidget(),
             ],
           ),
         ),
       ),
       body: QuizWidget(
-        title: "O que o Flutter faz em sua totalidade?",
+        question: questions[0],
       ),
       bottomNavigationBar: SafeArea(
         bottom: true,
