@@ -15,10 +15,18 @@ class _ChallengePageState extends State<ChallengePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(40),
+        preferredSize: Size.fromHeight(86),
         child: SafeArea(
           top: true,
-          child: QuestionIndicatorWidget(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              IconButton(icon: Icon(Icons.close), onPressed: () {
+                Navigator.pop(context);
+              }),
+              QuestionIndicatorWidget(),
+            ],
+          ),
         ),
       ),
       body: QuizWidget(
