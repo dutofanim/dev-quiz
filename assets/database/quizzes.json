@@ -1,50 +1,26 @@
 [
   {
-    "title": "NLW 5 Flutter",
-    "image": "blocks",
-    "questionsAwnsered" : 2,
+    "title": "NLW 5 Trilha de flutter",
+    "imagen": "assets/images/blocks.png",
     "level": "facil",
+    "questionsAnswered": 2,
     "questions": [
       {
-        "title": "Está gostando do Flutter?",
-        "answers": [
-          {
-            "title": "Sim, muito",
-            "rightAwnser": true
-          },
-          {
-            "title": "Sim, porém com algumas ressalvas",
-            "rightAwnser": false
-          },
-          {
-            "title": "Mais ou menos",
-            "rightAwnser": false
-          },
-          {
-            "title": "Não, prefiro React Native",
-            "rightAwnser": false
-          }
+        "title": "O que você esta achando do Flutter",
+        "awnsers": [
+          { "title": "Sem problemas até aqui" },
+          { "title": "Muito bom mas com dificuldade" },
+          { "title": "Ótimo acertando tudo de primeira", "rightAwnser": true },
+          { "title": "Incrivel, irei recomendar" }
         ]
       },
       {
-        "title": "Está gostando do React Native?",
-        "answers": [
-          {
-            "title": "Não muito",
-            "rightAwnser": false
-          },
-          {
-            "title": "Prefiro o Flutter",
-            "rightAwnser": true
-          },
-          {
-            "title": "Meia boca",
-            "rightAwnser": false
-          },
-          {
-            "title": "Péssimo mesmo",
-            "rightAwnser": false
-          }
+        "title": "Qual sua opnião sobre nosso curso",
+        "awnsers": [
+          { "title": "Bom, recomendo" },
+          { "title": "O Melhor até agora" },
+          { "title": "Professor explica muito rapido", "rightAwnser": true },
+          { "title": "Incrivel, aprendi bastante" }
         ]
       }
     ]

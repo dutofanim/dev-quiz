@@ -39,22 +39,22 @@ class QuizModel {
 
   Map<String, dynamic> toMap() {
     return {
-      'title': title,
-      'imagem': imagem,
-      'questions': questions.map((x) => x.toMap()).toList(),
-      'questionsAwnsered': questionsAwnsered,
-      'level': level.parse,
+      "title": title,
+      "imagem": imagem,
+      "questions": questions.map((x) => x.toMap()).toList(),
+      "questionsAwnsered": questionsAwnsered,
+      "level": level.parse,
     };
   }
 
   factory QuizModel.fromMap(Map<String, dynamic> map) {
     return QuizModel(
-      title: map['title'],
-      imagem: map['imagem'],
+      title: map["title"],
+      imagem: map["imagem"],
       questions: List<QuestionModel>.from(
-          map['questions']?.map((x) => QuestionModel.fromMap(x))),
-      questionsAwnsered: map['questionsAwnsered'],
-      level: map['level'].toString().parse,
+          map["questions"]?.map((x) => QuestionModel.fromMap(x))),
+      questionsAwnsered: map["questionsAwnsered"],
+      level: map["level"].toString().parse,
     );
   }
 
