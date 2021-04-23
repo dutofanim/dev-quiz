@@ -27,22 +27,22 @@
         ]
       },
       {
-        "title": "Está gostando do Flutter?",
+        "title": "Está gostando do React Native?",
         "answers": [
           {
-            "title": "Sim, muito",
+            "title": "Não muito",
+            "rightAwnser": false
+          },
+          {
+            "title": "Prefiro o Flutter",
             "rightAwnser": true
           },
           {
-            "title": "Sim, porém com algumas ressalvas",
+            "title": "Meia boca",
             "rightAwnser": false
           },
           {
-            "title": "Mais ou menos",
-            "rightAwnser": false
-          },
-          {
-            "title": "Não, prefiro React Native",
+            "title": "Péssimo mesmo",
             "rightAwnser": false
           }
         ]
