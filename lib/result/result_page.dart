@@ -1,19 +1,31 @@
 import 'package:devquiz/challenge/widgets/next_button/next_button_widget.dart';
 import 'package:devquiz/core/core.dart';
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 
 class ResultPage extends StatelessWidget {
-  const ResultPage({Key? key}) : super(key: key);
+  final String title;
+  final int awnsersLength;
+  final int correctAwnsers;
+
+  const ResultPage(
+      {Key? key,
+      required this.title,
+      required this.awnsersLength,
+      required this.correctAwnsers})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         width: double.maxFinite,
+        padding: EdgeInsets.only(top: 131),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Image.asset(AppImages.trophy),
             Column(
               children: [
                 Text(
@@ -29,11 +41,12 @@ class ResultPage extends StatelessWidget {
                     style: AppTextStyles.body,
                     children: [
                       TextSpan(
-                        text: "\nGerenciamento de Estado",
+                        text: "\n$title",
                         style: AppTextStyles.bodyBold,
                       ),
                       TextSpan(
-                        text: "\ncom 6 de 10 acertos.",
+                        text:
+                            "\ncom $correctAwnsers de $awnsersLength acertos.",
                         style: AppTextStyles.body,
                       ),
                     ],
@@ -50,7 +63,11 @@ class ResultPage extends StatelessWidget {
                         child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 68),
                       child: NextButtonWidget.purple(
-                          label: "Compartilhar", onTap: () {}),
+                          label: "Compartilhar",
+                          onTap: () {
+                            Share.share(
+                                "Terminei a Next Level Week 5 de Flutter");
+                          }),
                     )),
                   ],
                 ),
